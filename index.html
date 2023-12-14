@@ -18,15 +18,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     font-family: 'Noto Sans TC',sans-serif;
   }
-  .image {
-    height: 87%;
-  }
+
   .text {
     font-size: 60px;
     color: whitesmoke;
+  }
+  .image{
+  	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+    height:100%;
   }
   #demo {
     font-size: 50px;
@@ -35,12 +40,13 @@
 </style>
 
 <div class="background">
-  <div class="image"></div>
-  <div class="countDown">
-    <div class="text">阿洛出遊計時器 </div>
-    <div style="width: 100%;"></div>
-    <div id="demo"></div>
-  </div>
+	<div class="image">
+  	<div class="countDown">
+    	<div class="text">阿洛出遊計時器 </div>
+    	<div style="width: 100%;"></div>
+    	<div id="demo"></div>
+  	</div>
+	</div>
 </div>
 
 <script>
