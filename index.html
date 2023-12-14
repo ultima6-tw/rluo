@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+<head>
+	<title>阿洛出門計時器</title>
+	</head>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+  body {
+    margin: 0;
+  }
+  .background {
+    background-image: url("Rluo.jpg");
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  .countDown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Noto Sans TC',sans-serif;
+  }
+  .image {
+    height: 87%;
+  }
+  .text {
+    font-size: 60px;
+    color: whitesmoke;
+  }
+  #demo {
+    font-size: 50px;
+    color: whitesmoke;
+  }
+</style>
+
+<div class="background">
+  <div class="image"></div>
+  <div class="countDown">
+    <div class="text">阿洛出遊計時器 </div>
+    <div style="width: 100%;"></div>
+    <div id="demo"></div>
+  </div>
+</div>
+
+<script>
+
+var gotoplay = new Date("Dec 15, 2023 07:00:00").getTime();
+var leaveTime = new Date("DEC 20 2023 00:00:00").getTime();
+
+var x = setInterval(function() {
+
+  let leaveText;
+
+  var now = new Date().getTime();
+
+  let distance;
+  if (now < gotoplay) {
+    distance = gotoplay - now;
+    leaveText = "出門玩";
+  } else {
+    distance = gohome - now;
+    leaveText = "回家";
+  }
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = Math.abs(days) + "天 " + Math.abs(hours) + "小時 "
+  + Math.abs(minutes) + "分 " + Math.abs(seconds) + "秒 ";
+  if (distance > 0) {
+    document.getElementsByClassName("text")[0].innerHTML = "距離阿洛 " + leaveText + " 還有";
+  } else {
+    document.getElementsByClassName("text")[0].innerHTML = "距離阿洛 " + leaveText + " 只剩";
+  }
+}, 1000);
+</script>
