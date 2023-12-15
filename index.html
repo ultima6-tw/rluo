@@ -53,7 +53,7 @@
 
 var gotoplay = new Date("Dec 15, 2023 07:00:00").getTime();
 var leaveTime = new Date("DEC 20 2023 00:00:00").getTime();
-var gohome = new Date("Dec 20, 2023 20:00:00").getTime();
+var gohome = new Date("Dec 20, 2023 20:15:00").getTime();
 
 var x = setInterval(function() {
 
@@ -80,7 +80,7 @@ var x = setInterval(function() {
   document.getElementById("demo").innerHTML = Math.abs(days) + "天 " + Math.abs(hours) + "小時 "
   + Math.abs(minutes) + "分 " + Math.abs(seconds) + "秒 ";
   if (distance > 0) {
-    document.getElementsByClassName("text")[0].innerHTML = "距離阿洛 " + leaveText + " 還有";
+    document.getElementsByClassName("text")[0].innerHTML = "距離阿洛下一次 " + leaveText + " 還有";
   } else {
     document.getElementsByClassName("text")[0].innerHTML = "距離阿洛 " + leaveText + " 只剩";
   }
