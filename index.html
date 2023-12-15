@@ -52,8 +52,8 @@
 <script>
 
 var gotoplay = new Date("Dec 15, 2023 07:00:00").getTime();
-var leaveTime = new Date("DEC 20 2023 00:00:00").getTime();
-var gohome = new Date("Dec 20, 2023 20:15:00").getTime();
+var gohome = new Date("DEC 20 2023 00:00:00").getTime();
+//var gohome = new Date("Dec 20, 2023 20:15:00").getTime();
 
 var x = setInterval(function() {
 
@@ -67,7 +67,7 @@ var x = setInterval(function() {
     leaveText = "出門玩";
   } else {
     distance = gohome - now;
-    leaveText = "直播開始";
+    leaveText = "回家";
   }
 
   // Time calculations for days, hours, minutes and seconds
