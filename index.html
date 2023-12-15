@@ -67,7 +67,7 @@ var x = setInterval(function() {
     leaveText = "出門玩";
   } else {
     distance = gohome - now;
-    leaveText = "直播";
+    leaveText = "直播開始";
   }
 
   // Time calculations for days, hours, minutes and seconds
@@ -80,7 +80,7 @@ var x = setInterval(function() {
   document.getElementById("demo").innerHTML = Math.abs(days) + "天 " + Math.abs(hours) + "小時 "
   + Math.abs(minutes) + "分 " + Math.abs(seconds) + "秒 ";
   if (distance > 0) {
-    document.getElementsByClassName("text")[0].innerHTML = "距離阿洛下一次 " + leaveText + " 還有";
+    document.getElementsByClassName("text")[0].innerHTML = "距離阿洛 " + leaveText + " 還有";
   } else {
     document.getElementsByClassName("text")[0].innerHTML = "距離阿洛 " + leaveText + " 只剩";
   }
